@@ -10,25 +10,25 @@ class Rectangle {
         this.outlineSize = outlineSize;
         }
 
-    ShowSquare() {
+    Show() {
         fill(this.color);
         stroke(this.outlineFill); 
         strokeWeight(this.outlineSize);
         rect(this.x, this.y, this.sideA, this.sideB);          
         }
 
-    MoveSquare() {
-        this.ShowSquare();
+    Move() {
+        this.Show();
         this.x = this.x + this.speed;
         
-        if (this.x + this.sideA > 900) {
+        if (this.x > 900 - this.sideA) {
             this.speed = - this.speed;
-            this.x = 900 - this.sideA;
+            this.x = this.x + this.speed;
             } 
 
         else if (this.x < 0) {
             this.speed = - this.speed;
-            this.x = 0;
+            this.x = this.x + this.speed;
             }  
         }
     }
