@@ -1,4 +1,4 @@
-class SquareObject {
+class SquareObjects {
     constructor(positionX, positionY, size, color, speed) {
         this.x = positionX; 
         this.y = positionY; 
