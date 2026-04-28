@@ -16,20 +16,21 @@ class Rectangle {
             stroke(this.outlineFill); 
             strokeWeight(this.outlineSize);
             rect(this.x, this.y, this.sideA, this.sideB);          
-        }
+            }
+
         else {
             fill(this.color);
             stroke(this.outlineFill); 
             strokeWeight(this.outlineSize);
             rect(this.x, this.y, this.sideA, this.sideB); 
+            }
         }
-    }
 
     MoveX() {
         this.Show();
         this.x = this.x + this.speed;
         
-        if (this.x > 900 - this.sideA - 10) {
+        if (this.x > width - this.sideA - 10) {
             this.speed = - this.speed;
             this.x = this.x + this.speed;
             } 
@@ -44,7 +45,7 @@ class Rectangle {
         this.Show();
         this.y = this.y + this.speed;
         
-        if (this.y > 900 - this.sideB - 10) {
+        if (this.y > height - this.sideB - 10) {
             this.speed = - this.speed;
             this.y = this.y + this.speed;
             } 

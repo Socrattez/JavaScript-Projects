@@ -2,9 +2,11 @@ let RectList = [];
 
 function setup() {
     createCanvas(900, 900);
-    for (let i = 0; i <= 750; i = i + 150) {
+    for (let i = 0; i <= 750; i = i + 300) {
         RectList.push(new Rectangle(10 + i, 10, 130, 260, 6, 255, 255, 7));
         RectList.push(new Rectangle(10 + i, 10, 130, 130, 7.25, 0, 0, 0));
+        RectList.push(new Rectangle(160 + i, 10, 130, 260, 6, 255, 255, 7));
+        RectList.push(new Rectangle(160 + i, 10, 130, 130, 7.25, 0, 0, 0));
         }
     }
 
@@ -14,5 +16,6 @@ function draw() {
         RList.MoveY();
         }
     
-    Grid();
+    GridBlack();
+    GridWhite();
     } 
