@@ -26,7 +26,7 @@ class Rectangle {
             }
         }
 
-    MoveX() {
+/*  MoveX() {
         this.Show();
         this.x = this.x + this.speed;
         
@@ -39,7 +39,7 @@ class Rectangle {
             this.speed = - this.speed;
             this.x = this.x + this.speed;
             }  
-        }
+        } */
 
     MoveY() {
         this.Show();
