@@ -1,3 +1,8 @@
+let t;
+let g;
+let h;
+let b;
+
 function GridWhite() {
     for (g = 0; g <= 850; g = g + 50) {
        for (h = 0; h <= 850; h = h + 50) {
@@ -10,10 +15,10 @@ function GridWhite() {
 
 function GridBlack() {
     for (b = 0; b <= 850; b = b + 50) {
-       for (c = 0; c <= 850; c = c + 50) {
+       for (t = 0; t <= 850; t = t + 50) {
             stroke(0);
             strokeWeight(3);
-            line(63 + b, c, c, 63 + b);
+            line(63 + b, t, t, 63 + b);
             }
         }
     }

@@ -8,6 +8,7 @@ class Rectangle {
         this.color = color;
         this.outlineFill = outlineFill;
         this.outlineSize = outlineSize;
+        this.StartingPoint = y;
         }
 
     Show() {
@@ -26,33 +27,23 @@ class Rectangle {
             }
         }
 
-/*  MoveX() {
-        this.Show();
-        this.x = this.x + this.speed;
-        
-        if (this.x > width - this.sideA - 10) {
-            this.speed = - this.speed;
-            this.x = this.x + this.speed;
-            } 
-
-        else if (this.x < 10) {
-            this.speed = - this.speed;
-            this.x = this.x + this.speed;
-            }  
-        } */
-
     MoveY() {
-        this.Show();
-        this.y = this.y + this.speed;
-        
-        if (this.y > height - this.sideB - 10) {
-            this.speed = - this.speed;
-            this.y = this.y + this.speed;
-            } 
+    this.Show();
+    this.y = this.y + this.speed;
 
-        else if (this.y < 10) {
-            this.speed = - this.speed;
-            this.y = this.y + this.speed;
-            }  
+    let bottomLimit = height - this.sideB - 10;
+    let topLimit = 10;
+   
+    if (this.y > bottomLimit) {
+        let overshoot = this.y - bottomLimit; 
+        this.y = bottomLimit - overshoot; 
+        this.speed = -this.speed; 
+        } 
+    
+    else if (this.y < topLimit) {
+        let overshoot = topLimit - this.y; 
+        this.y = topLimit + overshoot; 
+        this.speed = -this.speed; 
         }
     }
+}
